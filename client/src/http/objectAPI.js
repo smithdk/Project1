@@ -1,7 +1,10 @@
-import {$host} from "./index";
+import axios from "axios";
+/*const [resp, setResp] = useState({})*/
 
-console.log($host.get('api/object/'))
+/*export const fetchObjects = async () =>{
+    return  await $host.get('api/object/')
+}*/
 
 export const fetchObjects = async () =>{
-    return  await $host.get('api/object/')
+    return await axios.get(`${process.env.REACT_APP_API_URL}api/object/`)
 }

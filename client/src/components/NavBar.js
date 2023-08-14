@@ -58,7 +58,7 @@ const NavBar = observer((/*{role}*/) =>{
     }*/
 
     return (
-        <Navbar expand="lg" className="bg-body-tertiary " /*bg={BG_COLOR} variant={VARIANT}*/>
+        <Navbar expand="lg" className="bg-body-tertiary bg-warning " /*bg={BG_COLOR} variant={VARIANT}*/>
             <Container fluid>
                 <Navbar.Brand >
                     <img

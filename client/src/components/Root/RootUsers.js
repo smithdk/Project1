@@ -1,13 +1,12 @@
 import {observer} from "mobx-react-lite";
 import {Card} from "react-bootstrap";
+import {RootContext} from "../../store/Root/RootContext"
+import {useContext} from "react";
 
 const RootUsers = observer(() =>{
-    /*const [visible, setVisible] = useState('d-none')*/
-/*    const rootContext  = useContext(RootContext)
-    let VISIBLE ;
-    rootContext.isUsersShow ? VISIBLE = "col-10 d-block p-2": VISIBLE = "col-10 d-none";*/
+    const rootContext = useContext(RootContext)
     return(
-       <Card >
+       <Card className={`${rootContext.usrVisible}  m-0 flex-row col-10`} >
             RootUsers <br/>
             RootUsers <br/>
             RootUsers <br/>
