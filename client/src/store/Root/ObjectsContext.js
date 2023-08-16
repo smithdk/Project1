@@ -21,9 +21,9 @@ export  const objectModel = {
     photo: null
 }
 
-const objectsContext = () =>{
+/*const objectsContext = () =>{
 
-/*
+/!*
 
     const rootContext = useContext(RootContext)
     const [objectItem, setObjectItem] = useState(objectModel)
@@ -47,10 +47,10 @@ const objectsContext = () =>{
                 setAddressBuildingNumber(rootContext.objects.data[id].addressBuildingNumber)
                 setPhoto(rootContext.objects.data[id].photo)*!/
     }
-*/
+*!/
 
-}
-export const ObjectsContext = React.createContext(objectsContext);
+}*/
+export const ObjectsContext = React.createContext(null);
 
 /*
 export {ObjectsContext, objectModel}*/

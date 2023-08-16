@@ -4,7 +4,7 @@ import {observer} from "mobx-react-lite";
 import AppRouter from "./components/AppRouter";
 
 const App = observer( () => {
-  return (
+    return (
     <BrowserRouter>
         <AppRouter />
     </BrowserRouter>

@@ -1,15 +1,16 @@
 import React, {useContext} from 'react';
 import {Card, Table} from "react-bootstrap";
-import {RootContext} from "../../store/Root/RootContext";
 import {ObjectsContext} from "../../store/Root/ObjectsContext";
 
 
 const RootListObjects = () => {
-    const rootContext = useContext(RootContext)
+  /*  const rootContext = useContext(RootContext)*/
     const objectsContext = useContext(ObjectsContext)
-    const setObject = (id) => {
-        objectsContext.setObject(id)
-            //console.log(id)
+    const selectObject = (id) => {
+       /* console.log(id)*/
+        objectsContext.setObjID(id)
+      /*  objectsContext.setObject(id)*/
+
     }
 
     return (
@@ -27,8 +28,8 @@ const RootListObjects = () => {
                 </tr>
                 </thead>
                 <tbody>
-                {rootContext.objects.data? rootContext.objects.data.map((item)=>
-                        <tr key =  {item.id} onClick={() => {setObject(item.id-1)}}>
+                {objectsContext.objects.data && objectsContext.objects.data.map((item)=>
+                        <tr key =  {item.id} onClick={() => {selectObject(item.id-1)}}>
                             <td>{item.id}</td>
                             <td>{item.name}</td>
                             <td>{item.addressCountry}</td>
@@ -37,7 +38,7 @@ const RootListObjects = () => {
                             <td>{item.addressStreet}</td>
                             <td>{item.addressBuildingNumber}</td>
                         </tr>)
-                    :null}
+                }
                 </tbody>
             </Table>
         </Card>
