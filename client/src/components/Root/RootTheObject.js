@@ -1,5 +1,5 @@
 import React, {useContext} from 'react';
-import {Card, Col, Form, Image} from "react-bootstrap";
+import {Badge, Card, Col, Form, Image} from "react-bootstrap";
 import {ObjectsContext} from "../../store/Root/ObjectsContext";
 
 const RootTheObject = () => {
@@ -18,9 +18,6 @@ const RootTheObject = () => {
                         <div className="text-center">
                             <h2 className="fw-bold "> Объект</h2>
                         </div>
-{/*                        <input
-                            value={objectsContext.objects.data[objectsContext.objID].name}
-                        />*/}
                         <Form className="d-flex flex-row  p-1 pt-0 pb-0">
                             <Form.Label   className="mt-2 m-1" style={{width:110}}>Название</Form.Label>
                             <Form.Control className="m-0" style={{width:150}}
@@ -72,6 +69,27 @@ const RootTheObject = () => {
                                           readOnly={objectsContext.readOnly}
                             />
                         </Form>
+                        <hr className="m-2 mt-2 mb-0" />
+                        <div className="d-flex flex-row  p-1 pt-2 pb-0 m-1 mt-0 mb-0">
+                            id: <Badge bg="secondary" className="m-2 mt-0 mb-0">{objectsContext.objects.data[objectsContext.objID].id}</Badge>
+{/*                        </div>
+                        <div className="d-flex flex-row  p-1 pt-2 pb-0 m-1 mt-0 mb-0">*/}
+                            <span style={{width:82}}> Creator id:</span>
+                            <Badge bg="secondary" className="m-2 mt-0 mb-0">{objectsContext.objects.data[objectsContext.objID].creatorId}</Badge>
+                            <span style={{width:145}}></span>
+                            <span style={{width:70}}>Editor id:</span>
+                            <Badge bg="secondary" className="m-2 mt-0 mb-0">{objectsContext.objects.data[objectsContext.objID].editorId}</Badge>
+                            <span style={{width:147}}></span>
+                            <span style={{width:80}}>Deleter id:</span>  <Badge bg="secondary" className="m-2 mt-0 mb-0">{objectsContext.objects.data[objectsContext.objID].deleterId}</Badge>
+                        </div>
+                        <div className="d-flex flex-row  p-1 pt-2 pb-0 m-1 mt-0 mb-1">
+                            <span style={{width:80}}>Created At:</span>
+                            <Badge style={{width:170}} bg="secondary" className="m-2 mt-0 mb-0">{objectsContext.objects.data[objectsContext.objID].createdAt}</Badge>
+                            <span style={{width:70}}>Edited At:</span>
+                            <Badge style={{width:170}} bg="secondary" className="m-2 mt-0 mb-0">{objectsContext.objects.data[objectsContext.objID].editedAt}</Badge>
+                            <span style={{width:80}}>Deleted At:</span>
+                            <Badge style={{width:170}} bg="secondary" className="m-2 mt-0 mb-0">{objectsContext.objects.data[objectsContext.objID].deletedAt}</Badge>
+                        </div>
                     </Col>
                 </Card>
        </div>
