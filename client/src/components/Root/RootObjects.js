@@ -12,6 +12,7 @@ const RootObjects = observer(() =>{
     const rootContext = useContext(RootContext)
     const [objects, setObjects] = useState({})
     const [objID, setObjID] = useState(0)
+    const [readOnly, setReadOnly] = useState(true)
 
     useEffect(()=> {
         fetchObjects().then(data => {setObjects(data)})
@@ -90,12 +91,13 @@ const RootObjects = observer(() =>{
         objects,
         objID,
         setObjID,
+        readOnly,
+        setReadOnly
 
 /*        objectItem,
         setObjectItem,
         setObject,
-        readOnly,
-        setReadOnly,
+
         setObjects*/
     }
 

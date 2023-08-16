@@ -4,13 +4,10 @@ import {ObjectsContext} from "../../store/Root/ObjectsContext";
 
 
 const RootListObjects = () => {
-  /*  const rootContext = useContext(RootContext)*/
+
     const objectsContext = useContext(ObjectsContext)
     const selectObject = (id) => {
-       /* console.log(id)*/
         objectsContext.setObjID(id)
-      /*  objectsContext.setObject(id)*/
-
     }
 
     return (
@@ -28,7 +25,8 @@ const RootListObjects = () => {
                 </tr>
                 </thead>
                 <tbody>
-                {objectsContext.objects.data && objectsContext.objects.data.map((item)=>
+                {objectsContext.objects.data &&
+                    objectsContext.objects.data.map((item)=>
                         <tr key =  {item.id} onClick={() => {selectObject(item.id-1)}}>
                             <td>{item.id}</td>
                             <td>{item.name}</td>
