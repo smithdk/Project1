@@ -13,6 +13,7 @@ const RootObjects = observer(() =>{
     const [objects, setObjects] = useState({})
     const [objID, setObjID] = useState(0)
     const [readOnly, setReadOnly] = useState(true)
+    const [btnSaveEnable,setBtnSaveEnable] = useState('disabled')
 
     useEffect(()=> {
         fetchObjects().then(data => {setObjects(data)})
@@ -89,10 +90,9 @@ const RootObjects = observer(() =>{
 
     const context = {
         objects,
-        objID,
-        setObjID,
-        readOnly,
-        setReadOnly
+        objID,setObjID,
+        readOnly,setReadOnly,
+        btnSaveEnable,setBtnSaveEnable
 
 /*        objectItem,
         setObjectItem,
@@ -106,7 +106,7 @@ return(
         {objects.data &&
             <ObjectsContext.Provider value={context}>
                 <RootTheObject/>
-                <EditButtons/>
+                <EditButtons mode="objects"/>
                 <RootListObjects/>
             </ObjectsContext.Provider>
         }
