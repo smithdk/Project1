@@ -9,6 +9,7 @@ const Root = () => {
     /*const [objects, setObjects] = useState({})*/
     const [objVisible,setObjVisible] = useState("d-block")
     const [usrVisible,setUsrVisible] = useState("d-none")
+    const [btnSaveEnable,setBtnSaveEnable] = useState('disabled')
 
 /*    const lgObjectsClick =  () =>{
         setObjVisible("d-block")
@@ -31,7 +32,9 @@ const Root = () => {
         objVisible,
         usrVisible,
         setObjVisible,
-        setUsrVisible
+        setUsrVisible,
+        btnSaveEnable,
+        setBtnSaveEnable
     }
 
     return (

@@ -9,11 +9,12 @@ import EditButtons from "../EditButtons";
 const RootUsers = observer(() =>{
     const rootContext = useContext(RootContext)
     const [users, setUsers] = useState({})
+
     useEffect(()=> {
         fetchObjects().then(data => {setUsers(data)})
     },[])
     const context = {
- /*       objects,
+  /*       objects,
         objID,setObjID,
         readOnly,setReadOnly,
         btnSaveEnable,setBtnSaveEnable
