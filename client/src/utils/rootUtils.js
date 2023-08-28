@@ -1,20 +1,24 @@
 
-const btnObjNewOnClick =  (context) =>{
-    context.setBtnSaveEnable('')
+const btnObjNewOnClick =  (context,rootState) =>{
+    rootState.btnSaveEnable('')
+   /* context.setBtnSaveEnable('')*/
     console.log('btnObjNewOnClick')
 }
 
-const btnObjSaveOnClick =  (context) =>{
-    context.setBtnSaveEnable('disabled')
+const btnObjSaveOnClick =  (context,rootState) =>{
+    rootState.btnSaveEnable('disabled')
+    /*context.setBtnSaveEnable('disabled')*/
     console.log('btnObjSaveOnClick')
 }
 
-const btnUsrNewOnClick =  () =>{
+const btnUsrNewOnClick =  (rootState) =>{
+    rootState.btnSaveEnable('')
    /* objectsContext.setBtnSaveEnable('')*/
     console.log('btnUsrNewOnClick')
 }
 
-const btnUsrSaveOnClick =  () =>{
+const btnUsrSaveOnClick =  (rootState) =>{
+    rootState.btnSaveEnable('disabled')
   /*  objectsContext.setBtnSaveEnable('disabled')*/
     console.log('btnUsrSaveOnClick')
 }

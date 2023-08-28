@@ -13,16 +13,10 @@ const RootObjects = observer(() =>{
     const [objects, setObjects] = useState({})
     const [objID, setObjID] = useState(0)
     const [readOnly, setReadOnly] = useState(true)
-    const [btnSaveEnable,setBtnSaveEnable] = useState('disabled')
 
     useEffect(()=> {
         fetchObjects().then(data => {setObjects(data)})
     },[])
-/*
-   let objId = 0
-   const [objectItem, setObjectItem] = useState(objectModel)
-   const [readOnly, setReadOnly] = useState(true)
-   */
 
     /*console.log(objectItem)*/
    // const [objectItem, setObjectItem] = useState(objectsContext.objectModel)
@@ -92,13 +86,6 @@ const RootObjects = observer(() =>{
         objects,
         objID,setObjID,
         readOnly,setReadOnly,
-        btnSaveEnable,setBtnSaveEnable
-
-/*        objectItem,
-        setObjectItem,
-        setObject,
-
-        setObjects*/
     }
 
 return(
